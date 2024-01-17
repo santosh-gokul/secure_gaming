@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package memorycheck;
+
+// Interface exported by the server.
+service MemoryCheck {
+  rpc MemoryChat(Payload) returns (Payload) {}
+}
+
+message Payload {
+  // The message to be sent.
+  string message = 1;
+}
